@@ -1,13 +1,17 @@
 // Note: test code container file names ends with _test.go
 //		Also, the test function name starts with Test
 
-package greetings
+package greetings_test
 
-import "testing"
+import (
+	"testing"
+
+	greetings "github.com/ThamizhLearner/testGoLib"
+)
 
 func TestFunction(t *testing.T) {
 	name := "Gladys"
-	msg := Hello(name)
+	msg := greetings.Hello(name)
 	if msg != "Hi, Gladys. Welcome!" {
 		t.Error("Failed")
 	}
